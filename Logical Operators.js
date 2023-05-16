@@ -35,10 +35,58 @@ if(hour < 10 || hour >18 || isWeekend){
 // true && false // false
 // false && false// false
 
-let hour = 12;
+/*let hour = 12;
 let minute = 30;
 
 if(hour==12 && minute==30){
     alert("The time is 12:30")
-}
+}*/
 
+
+// The AND && operator does the following:
+// Evaluates operands from left to right.
+// For each operand, converts it to a boolean. If the result is false, stops and returns the original value of that operand.
+// If all operands have been evaluated (i.e. all were truthy), returns the last operand.
+// In other words, AND returns the first falsy value or the last value if none were found.
+// The rules above are similar to OR. The difference is that AND returns the first falsy value while OR returns the first truthy one.
+
+/*alert(1 && 1 && 0)*/
+
+// ! (NOT)
+// The boolean NOT operator is represented with an exclamation sign !.
+// The syntax is pretty simple:
+// result = !value;
+// The operator accepts a single argument and does the following:
+// Converts the operand to boolean type: true/false.
+// Returns the inverse value.
+
+/*alert(!true)
+alert(!false)*/
+
+// A double NOT !! is sometimes used for converting a value to boolean type:
+
+/*alert(!!'non empty string')
+alert(!!null)*/
+
+let input = prompt("Who's there?")
+
+if(input == 'cancel')
+{
+    alert('Canceled');
+}
+else if(input == 'Admin'){
+    let password = prompt('Enter your password')
+    if(password=='TheMaster'){
+        alert('Welcome')
+    }
+    else if(password=='cancel'){
+        alert('Canceled')
+
+    }
+    else {
+        alert('Wrong password')
+    }
+}
+else {
+    alert('I dont know')
+}
