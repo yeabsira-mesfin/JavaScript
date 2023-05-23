@@ -1,4 +1,5 @@
-// || (OR)
+// The notes are commmented out by // and the codes with /**/ follow
+//|| (OR)
 // In classical programming, the logical OR is meant to manipulate boolean values only. If any of its arguments are true, it returns true, otherwise it returns false.
 // true || true  // true
 // false || true   // true
@@ -68,25 +69,5 @@ alert(!false)*/
 /*alert(!!'non empty string')
 alert(!!null)*/
 
-let input = prompt("Who's there?")
 
-if(input == 'cancel')
-{
-    alert('Canceled');
-}
-else if(input == 'Admin'){
-    let password = prompt('Enter your password')
-    if(password=='TheMaster'){
-        alert('Welcome')
-    }
-    else if(password=='cancel'){
-        alert('Canceled')
-
-    }
-    else {
-        alert('Wrong password')
-    }
-}
-else {
-    alert('I dont know')
-}
+alert(1 && 2)
