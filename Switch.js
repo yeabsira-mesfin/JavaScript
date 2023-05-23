@@ -1,3 +1,4 @@
+// The notes are commmented out by // and the codes with /**/ follow
 // A switch statement can replace multiple if checks.
 // It gives a more descriptive way to compare a value with multiple variants.
 /*let a = Number(prompt('Please enter the first number'));
