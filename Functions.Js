@@ -54,7 +54,7 @@ paramater('Ann','Hello');*/
 
 // Please note: the function changes the parameter, but the change is not seen outside, because a function always gets a copy of the value:
 
-function parameterChange(from,text){
+/*function parameterChange(from,text){
     from = '*' + from + '*';
     alert(from + ':' + text);
 }
@@ -62,4 +62,68 @@ let from='Ann';
 
 parameterChange(from,'Hello')
 alert(from)//doesn't change since a function uses the copy of a value.
+*/
+// When a value is passed as a function parameter, it’s also called an argument.
+// In other words, to put these terms straight:
+// A parameter is the variable listed inside the parentheses in the function declaration (it’s a declaration time term).
+// An argument is the value that is passed to the function when it is called (it’s a call time term).
+// We declare functions listing their parameters, then call them passing arguments.
+// In the example above, one might say: "the function showMessage is declared with two parameters, then called with two arguments: from and "Hello"".
+// If a function is called, but an argument is not provided, then the corresponding value becomes undefined.
+// We can specify the so-called “default” (to use if omitted) value for a parameter in the function declaration, using =:
 
+/*function defaultValue(from,text=" Default value"){
+    alert(from + ":" + text);
+}
+defaultValue('This will show you the ->');*/
+
+// Modern JavaScript engines support the nullish coalescing operator ??, it’s better when most falsy values, such as 0, should be considered “normal”:
+
+/*function showCoalescingOperator(text){
+    alert(text??'Unknown')
+}
+showCoalescingOperator(0);
+showCoalescingOperator(null);
+showCoalescingOperator();*/
+
+// Returning a value
+// A function can return a value back into the calling code as the result.
+// The simplest example would be a function that sums two values:
+
+/*function sum(a,b){
+    return a+b;
+}
+let result=sum(44,45);
+alert(result);*/
+
+// The directive return can be in any place of the function. When the execution reaches it, the function stops, 
+// and the value is returned to the calling code (assigned to result above).
+
+/*function checkAge(age) {
+    if (age >= 18) {
+      return true;
+    } else {
+      return confirm('Do you have permission from your parents?');
+    }
+  }
+  
+  let age = prompt('How old are you?', 18);
+  
+  if ( checkAge(age) ) {
+    alert( 'Access granted' );
+  } else {
+    alert( 'Access denied' );
+  }*/
+
+// Never add a newline between return and the value
+
+//Generally function names should be concise and descriptive.
+//showMessage() // should only show a message.
+//getMessage()  // should only get a message.
+
+function power(a,n){
+    return a**n;
+}
+let a=prompt('Enter the first number')
+let b=prompt('Enter the second number')
+alert(power(a,b))
